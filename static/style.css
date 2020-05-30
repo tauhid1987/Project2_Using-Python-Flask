@@ -1,0 +1,237 @@
+body{
+    background-color: #caaaaa;
+    overflow: hidden;
+}
+
+.center{
+    margin: 45vh auto;
+    text-align: center;
+    background-color: #3b5b7d;
+}
+
+.section-right{
+    height: 100vh;
+    width: 100%;
+    padding: 5px;
+}
+
+#msgs{
+    width: 100%;
+    overflow-y: auto;
+    height: 80%;
+}
+
+.send-msg{
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.section-left{
+    height: 100vh;
+    background-color: rgb(146, 30, 30);
+}
+
+#channels{
+    list-style-type: '# ';
+    color: #2894ce; 
+    padding: 10px 20px;
+}
+
+#channels li a{
+    color: info;
+    text-decoration: none;
+}
+
+.channels-div{
+    FONT-WEIGHT: 500;
+    width: 50%;
+    height: 90%;
+    overflow-y: auto;
+    margin: 0px;
+    background color: #4f714f;
+}
+
+.channels select{
+    width: 20%;
+}
+
+#channels li:hover{
+    color: rgba(85, 105, 128, 0.25);
+}
+
+#channels li:hover a {
+    color: rgba(0,123,255,.5);
+}
+
+
+#myhr{
+    border: 1px solid #45f36d;
+}
+
+#add-button{
+    float: right;
+    /* width: 20%; */
+    font-size: 12px;
+    color: #ecdcdc;
+    background-color: transparent;
+    border: none;
+    padding: 0 5px;
+}
+
+#add-button:hover{
+    background-color: rgba(183, 122, 122, 0.8);
+}
+
+
+.modal-header{
+    border-bottom: 0 none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.modal-header h4{
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.modal-header p{
+    font-size: 14px;
+    color: gray;
+}
+
+.modal-body{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.modal-body button{
+    float: right;
+    margin-top: 30px;
+}
+
+.delete-msg{
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #202325;
+    border: none;
+    margin: 2px;
+}
+
+.delete-msg:hover{
+    background-color: rgb(238, 238, 238);
+    border-radius: 50%;
+    color: rgb(78, 78, 78);
+    border-color: white;
+}
+
+.delete-msg:focus {
+    outline: none;
+}
+
+
+#display-name{
+    color: white;
+}
+
+#login-name{
+    color: #86670a;
+}
+
+.display-name{
+    font-weight: bolder;
+}
+
+#channel-name {
+    color: black;
+    padding-left: 12px;
+    background-color: #b74242;
+	font-size: 35px;
+ }
+
+
+.timestamp{
+    font-size: smaller;
+    font-style: normal;
+    font-weight: lighter;
+}
+input#msg, input#channel, input#login-name{
+    border: none;
+}
+
+input#msg:focus, input#channel, input#login-name{
+    outline: none;
+    box-shadow: 0 0 0 1px black;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+#inputImageButton fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+.chat-img img {
+    border-radius: 0 10px 10px 10px;
+    background: #f2f2f2;
+}
+
+
+#send{
+    border: 0px;
+    border-radius: 15px;
+    margin:0 5px;
+}
+
+
+@keyframes delete {
+    0% {
+        opacity: 1;
+        height: 60px;
+        line-height: 10px;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+    }
+
+    50% {
+        opacity: 0;
+        height: 60px;
+        line-height: 10px;
+        padding: 5px 20px;
+        margin-bottom: 10px;   
+    }
+    
+    100% {
+        background-color: #adb5bd;;
+        opacity: 0;
+        height: 0px;
+        line-height: 0px;
+        padding: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+
+.message-div{
+    position: relative;
+    background-color: #adb5bd;;
+    height: 60px;
+    line-height: 10px;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    
+    animation-name: delete;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}

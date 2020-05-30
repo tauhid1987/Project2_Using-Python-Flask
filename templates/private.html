@@ -1,0 +1,33 @@
+  {% extends 'layout.html' %}
+
+  {% block body %}
+
+<br>
+
+<div class="container">
+
+    <div class="alert alert-secondary bg-info" role="alert">
+      <h1 class="display" style="font-weight: bold; font-size: 1.7rem;">Private Channel You Can Talk With Your Nighest One</h1>
+    </div><br>
+
+  <div class="form-group">
+      <div><input type="text" id="username" class="form-control col-sm-8" placeholder="Enter Your Name to Register"></div>
+	  <br>
+      <button id="send_username" class="btn btn-info">Register</button>
+      <br><br><br>
+
+      <h1 style="color:white">Send To:<h1> <input type="text" id="send_to_username" class="form-control col-sm-12" placeholder="Type Username Here">
+      <h1 style="color:white">Message:</h1> <input type="text" id="private_message" class="form-control col-sm-12" placeholder="Enter Message Here"><br>
+      <button id="send_private_message" class="btn btn-info mt*1.5">Send Message</button>
+  </div>
+</div>
+<a href="http://127.0.0.1:5000/" class="text-warning"><h3>General Channel</h3></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+    <script
+              src="http://code.jquery.com/jquery-3.2.1.min.js"
+              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+              crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='private.js') }}"></script>
+
+  {% endblock %}
