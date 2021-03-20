@@ -3,5 +3,5 @@ Flask-SocketIO
 Flask-Session
 Werkzeug==0.15.2
 werkzeug==0.16.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 
