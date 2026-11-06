@@ -1,0 +1,9 @@
+# virtual environments and local data: never commit these
+envp2/
+env/
+venv/
+.venv/
+flask_session/
+.env
+__pycache__/
+*.py[cod]
